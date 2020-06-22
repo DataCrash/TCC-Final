@@ -1,3 +1,5 @@
+<?php include('cabecalho.php'); ?>
+
 <div class="container">
     <div class="col-200">
         <h2>Linha Toco</h2>
@@ -125,3 +127,5 @@
         </a>
     </div>
 </div>
+
+<?php include('rodape.php'); ?>

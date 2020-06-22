@@ -1,3 +1,5 @@
+<?php include('cabecalho.php'); ?>
+
 <div class="container">
     <div class="texto-destaque3">
         <h2>Origem da empresa</h2>
@@ -24,3 +26,5 @@
             entretenimento. Atualmente a área da informática é uma das que mais crescem. </p>
     </div>
 </div>
+
+<?php include('rodape.php'); ?>

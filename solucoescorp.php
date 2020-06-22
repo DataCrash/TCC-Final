@@ -1,3 +1,5 @@
+<?php include('cabecalho.php'); ?>
+
 <div class="container">
     <h1>Soluções Corporativas</h1>
     <p>Soluções corporativas foi o perfil que criamos voltado para ambientes de trabalho que necessitam muitas vezes
@@ -19,3 +21,5 @@
         </div>
     </div>
 </div>
+
+<?php include('rodape.php'); ?>

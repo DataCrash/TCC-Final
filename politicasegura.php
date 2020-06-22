@@ -1,3 +1,5 @@
+<?php include('cabecalho.php'); ?>
+
 <div class="container">
     <div class="texto-destaque8">
         <h2>Política de Privacidade</h2>
@@ -20,3 +22,5 @@
         </p>
     </div>
 </div>
+
+<?php include('rodape.php'); ?>

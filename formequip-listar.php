@@ -1,3 +1,5 @@
+<?php include('cabecalho.php'); ?>
+
 <div class="container-fluid">
     <div class="row">
         <div class="col">

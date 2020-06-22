@@ -1,3 +1,5 @@
+<?php include('cabecalho.php'); ?>
+
 <div class="container">
     <div class="texto-destaque8">
         <h1>Como deseja receber seu orçamento?</h1>
@@ -10,3 +12,5 @@
 
     </div>
 </div>
+
+<?php include('rodape.php'); ?>

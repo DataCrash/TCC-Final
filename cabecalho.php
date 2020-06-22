@@ -2,12 +2,12 @@
 
 if (!isset($_SESSION)) session_start();
 
-if (!array_key_exists('clientes', $_SESSION)) $_SESSION['clientes'] = [];
+if (!array_key_exists('usuario', $_SESSION)) $_SESSION['usuario'] = [];
 
-$_SESSION['clientes']['id'] = $_SESSION['clientes']['id'] ?? 0;
-$_SESSION['clientes']['admin'] = $_SESSION['clientes']['admin'] ?? -1;
-$_SESSION['clientes']['nome'] = $_SESSION['clientes']['nome'] ?? 'Desconhecido';
-$_SESSION['clientes']['foto'] = $_SESSION['clientes']['foto'] ?? 0;
+$_SESSION['usuario']['id'] = $_SESSION['usuario']['id'] ?? 0;
+$_SESSION['usuario']['admin'] = $_SESSION['usuario']['admin'] ?? -1;
+$_SESSION['usuario']['nome'] = $_SESSION['usuario']['nome'] ?? 'Desconhecido';
+$_SESSION['usuario']['foto'] = $_SESSION['usuario']['foto'] ?? 0;
 
 ?>
 
@@ -33,7 +33,7 @@ $_SESSION['clientes']['foto'] = $_SESSION['clientes']['foto'] ?? 0;
     <nav class="navbar navbar-expand-sm bg-secondary">
         <div class="container">
             <a class="navbar-brand js-scroll-trigger" href="#page-top">
-                <img class="img-fluid" src="/assets/img/bootkamp-logo.png" alt="Bootkamp Logo">
+                <img class="img h-50 w-50" src="/assets/img/bootkamp-logo.png" alt="Bootkamp Logo">
             </a>
             <button class="navbar-toggler navbar-toggler-right font-weight-bold bg-primary text-white rounded"
                 type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive"
@@ -63,7 +63,7 @@ $_SESSION['clientes']['foto'] = $_SESSION['clientes']['foto'] ?? 0;
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="server/logout.php">Sair</a>
+                        <a class="nav-link" href="/server/logout.php">Sair</a>
                     </li>
 
                     <?php endif ?>
@@ -74,11 +74,11 @@ $_SESSION['clientes']['foto'] = $_SESSION['clientes']['foto'] ?? 0;
     <main>
         <div class="container">
             <div class="navbar justify-content-around bg-light">
-                    <a class="nav-item mx-0 mx-lg-1 nav-link py-1 px-0 px-lg-3 rounded js-scroll-trigger" href="#institucional">Institucional</a>
-                    <a class="nav-item mx-0 mx-lg-1 nav-link py-1 px-0 px-lg-3 rounded js-scroll-trigger" href="#dia">Dia a Dia</a>
-                    <a class="nav-item mx-0 mx-lg-1 nav-link py-1 px-0 px-lg-3 rounded js-scroll-trigger" href="#corporativas">Soluções Corporativas</a>
-                    <a class="nav-item mx-0 mx-lg-1 nav-link py-1 px-0 px-lg-3 rounded js-scroll-trigger" href="#gamers">Gamers & Streamer</a>
-                    <a class="nav-item mx-0 mx-lg-1 nav-link py-1 px-0 px-lg-3 rounded js-scroll-trigger" href="#contato">Contato</a>
+                    <a class="nav-item mx-0 mx-lg-1 nav-link py-1 px-0 px-lg-3 rounded js-scroll-trigger" href="/institucional.php">Institucional</a>
+                    <a class="nav-item mx-0 mx-lg-1 nav-link py-1 px-0 px-lg-3 rounded js-scroll-trigger" href="/diaadia.php">Dia a Dia</a>
+                    <a class="nav-item mx-0 mx-lg-1 nav-link py-1 px-0 px-lg-3 rounded js-scroll-trigger" href="/solucoescorp.php">Soluções Corporativas</a>
+                    <a class="nav-item mx-0 mx-lg-1 nav-link py-1 px-0 px-lg-3 rounded js-scroll-trigger" href="/gamersestreamers.php">Gamers & Streamer</a>
+                    <a class="nav-item mx-0 mx-lg-1 nav-link py-1 px-0 px-lg-3 rounded js-scroll-trigger" href="/contato.php">Contato</a>
             </div>
         </div>
     </main>

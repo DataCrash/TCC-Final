@@ -1,9 +1,9 @@
 
     <footer class="page-footer  bg-secondary text-white fixed-bottom">
-        <div class="container">
+        <div class="container-fluid">
             <div class="row mx-auto my-2">
                 <div class="col-2">
-                    <img class="img-fluid" src="/assets/img/bootkamp-logo.png" alt="Bootkamp Logo">
+                    <img class="img-fluid w-50" src="/assets/img/bootkamp-logo.png" alt="Bootkamp Logo">
                 </div>
                 <div class="col-4">
                     <div class="row">
@@ -16,8 +16,7 @@
                 <div class="col">Os preços anunciados neste site ou via e-mail promocional podem ser alterados sem prévio aviso.<br>
                     A Bootkamp, não é responsável por erros descritivos.<br>
                     As fotos contidas nesta página são meramente ilustrativas dos produtos e podem variar de acordo com o fornecedor/lote do fabricante.<br>
-                    Ofertas válidas até o término de nossos estoques.<br>
-                    Vendas sujeitas à análise e confirmação de dados.
+                    Ofertas válidas até o término de nossos estoques. Vendas sujeitas à análise e confirmação de dados.
                 </div>
             </div>
         </div>

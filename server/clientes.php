@@ -1,14 +1,15 @@
 <?php
 
-include("pdo-connection.php");
+include("pdo_connection.php");
 
 function logar($usuario)
 {
     global $PDO;
-    $sql = "SELECT * FROM clientes
-             WHERE usuario = :usuario
-               AND senha = :senha
-               AND ISNULL(inativado)";
+    $sql = "SELECT * 
+            FROM clientes
+            WHERE usuario = :usuario
+                AND senha = :senha
+                AND ISNULL(inativado)";
     $stmt = $PDO->prepare($sql);
     $res = $stmt->execute($usuario);
     $row = $stmt->fetch(PDO::FETCH_ASSOC);
@@ -48,16 +49,6 @@ function listarAtivos()
     return $rows;
 }
 
-function usuarioTipos()
-{
-    global $PDO;
-    $sql = "SELECT * FROM usuario_tipos";
-    $result = $PDO->query($sql);
-    $rows = $result->fetchAll(PDO::FETCH_ASSOC);
-
-    return $rows;
-}
-
 function cadastrar($usuario)
 {
     global $PDO;
@@ -65,16 +56,8 @@ function cadastrar($usuario)
     (nome,
     sobrenome,
     cpf,
-    nascimento,
     email,
     celular,
-    cep,
-    endereco,
-    numero,
-    bairro,
-    complemento,
-    cidade,
-    uf,
     usuario,
     senha,
     inativado,
@@ -85,16 +68,8 @@ function cadastrar($usuario)
     (:nome,
     :sobrenome,
     :cpf,
-    :nascimento,
     :email,
     :celular,
-    :cep,
-    :endereco,
-    :numero,
-    :bairro,
-    :complemento,
-    :cidade,
-    :uf,
     :usuario,
     :senha,
     :inativado,
@@ -103,23 +78,15 @@ function cadastrar($usuario)
     $stmt = $PDO->prepare($sql);
 
     $stmt->execute(array(
-        ':nome' => $clientes['nome'],
-        ':sobrenome' => $clientes['sobrenome'],
-        ':cpf' => $clientes['cpf'],
-        ':nascimento' => $clientes['nascimento'],
-        ':email' => $clientes['email'],
-        ':celular' => $clientes['celular'],
-        ':cep' => $clientes['cep'],
-        ':endereco' => $clientes['endereco'],
-        ':numero' => $clientes['numero'],
-        ':bairro' => $clientes['bairro'],
-        ':complemento' => $clientes['complemento'],
-        ':cidade' => $clientes['cidade'],
-        ':uf' => $clientes['uf'],
-        ':usuario' => $clientes['usuario'],
-        ':senha' => $clientes['senha'],
-        ':inativado' => $clientes['inativado'],
-        ':adm' => $clientes['adm']
+        ':nome' => $usuario['nome'],
+        ':sobrenome' => $usuario['sobrenome'],
+        ':cpf' => $usuario['cpf'],
+        ':email' => $usuario['email'],
+        ':celular' => $usuario['celular'],
+        ':usuario' => $usuario['usuario'],
+        ':senha' => $usuario['senha'],
+        ':inativado' => $usuario['inativado'],
+        ':adm' => $usuario['adm']
     ));
 
     return $PDO->lastInsertId();
@@ -132,16 +99,8 @@ function editar($usuario)
         nome = :nome
         sobrenome = :sobrenome
         cpf = :cpf
-        nascimento = :nascimento
         email = :email
         celular = :celular
-        cep = :cep
-        endereco = :endereco
-        numero = :numero
-        bairro = :bairro
-        complemento = :complemento
-        cidade = :cidade
-        uf = :uf
         usuario = :usuario
         senha = :senha
         inativado = :inativado
@@ -150,23 +109,15 @@ function editar($usuario)
     $stmt = $PDO->prepare($sql);
 
     $stmt->execute(array(
-        ':nome' => $clientes['nome'],
-        ':sobrenome' => $clientes['sobrenome'],
-        ':cpf' => $clientes['cpf'],
-        ':nascimento' => $clientes['nascimento'],
-        ':email' => $clientes['email'],
-        ':celular' => $clientes['celular'],
-        ':cep' => $clientes['cep'],
-        ':endereco' => $clientes['endereco'],
-        ':numero' => $clientes['numero'],
-        ':bairro' => $clientes['bairro'],
-        ':complemento' => $clientes['complemento'],
-        ':cidade' => $clientes['cidade'],
-        ':uf' => $clientes['uf'],
-        ':usuario' => $clientes['usuario'],
-        ':senha' => $clientes['senha'],
-        ':inativado' => $clientes['inativado'],
-        ':adm' => $clientes['adm'],
+        ':nome' => $usuario['nome'],
+        ':sobrenome' => $usuario['sobrenome'],
+        ':cpf' => $usuario['cpf'],
+        ':email' => $usuario['email'],
+        ':celular' => $usuario['celular'],
+        ':usuario' => $usuario['usuario'],
+        ':senha' => $usuario['senha'],
+        ':inativado' => $usuario['inativado'],
+        ':adm' => $usuario['adm'],
         ':id' => $usuario['id']
     ));
 }

@@ -1,3 +1,5 @@
+<?php include('cabecalho.php'); ?>
+
 <div class="container">
     <h1>Gamers e Streamers</h1>
     <p>Dia a dia foi um perfil que criamos para os usuários mais casuais que utilizam um pc mais para as tarefas e
@@ -19,3 +21,5 @@
         </div>
     </div>
 </div>
+
+<?php include('rodape.php'); ?>

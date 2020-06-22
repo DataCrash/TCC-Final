@@ -1,3 +1,5 @@
+<?php include('cabecalho.php'); ?>
+
 <div class="container">
     <div class="Formequip">
         <form class="equip" method="Post" action="/formequip-listar.php" onsubmit="">
@@ -14,3 +16,5 @@
         </form>
     </div>
 </div>
+
+<?php include('rodape.php'); ?>

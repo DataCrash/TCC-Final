@@ -27,7 +27,7 @@ $_SESSION['login_error'] = $_SESSION['login_error'] ?? 0;
                 <?php endif ?>
 
                 <button type="submit" class="btn btn-primary">Login</button>
-                <a class="btn btn-danger" href="clientes-listar.php">Cancelar</a>
+                <a class="btn btn-danger" href="/index.php">Cancelar</a>
             </form>
         </div>
     </div>

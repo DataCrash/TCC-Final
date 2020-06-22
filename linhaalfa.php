@@ -1,3 +1,5 @@
+<?php include('cabecalho.php'); ?>
+
 <div class="container">
     <h2>Linha Alfa</h2>
     <p> Estes modelos de entrada foram concebidos para os usuários mais casuais com base na arquitetura da marca
@@ -121,3 +123,5 @@
         </a>
     </div>
 </div>
+
+<?php include('rodape.php'); ?>
